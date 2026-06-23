@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always On Pages | 24/7 Digital Receptionist</title>
+    <!-- Tailwind CSS for instant, premium styling without heavy files -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-slate-950/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Glowing Candle Flame Emblem -->
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center border border-amber-500/30 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+                    <span class="text-amber-500 text-xl font-bold">🔥</span>
+                </div>
+                <span class="font-bold tracking-tight text-lg">Always On Pages</span>
+            </div>
+            <span class="text-xs bg-slate-800 px-2 py-1 rounded-full text-slate-400 font-mono">Status: 24/7 Active</span>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto px-4 py-12 md:py-20 text-center">
+        
+        <!-- Dynamic Trade Tag (Changes automatically) -->
+        <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider" id="trade-tag">
+            Enterprise Local Trade Edition
+        </div>
+
+        <!-- Main Dynamic Headline -->
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+            Every Missed Call After 5:00 PM is a $1,500 Gift to Your Competitor.
+        </h1>
+
+        <!-- Custom Explainer Paragraph -->
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed" id="welcome-text">
+            Stop losing high-margin emergency service revenue. Always On Pages gives your local contracting business a digital front desk that answers calls, schedules leads, and triages emergencies 24/7.
+        </p>
+
+        <!-- Interactive Live Action Area -->
+        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl max-w-xl mx-auto shadow-2xl mb-16">
+            <h3 class="font-bold text-xl text-white mb-2" id="biz-title">Test Your Custom Business Clone</h3>
+            <p class="text-slate-400 text-sm mb-6">We scraped your current website rules and loaded them into this interactive voice assistant prototype. Call it right now to see how it works.</p>
+            
+            <!-- Dynamic Button Triggering Call Platform -->
+            <button onclick="triggerDemoCall()" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-slate-950 font-bold text-lg py-4 px-6 rounded-xl transition shadow-[0_4px_20px_rgba(245,158,11,0.3)] flex items-center justify-center gap-2 cursor-pointer">
+                <span>📞</span> Test Your Virtual Agent Free
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Script to Read Link Parameters and Instantly Transform the Page -->
+    <script>
+        // 1. Read URL details (e.g., ?biz=ProLine_Plumbing&trade=plumber)
+        const params = new URLSearchParams(window.location.search);
+        const rawBiz = params.get('biz');
+        const rawTrade = params.get('trade');
+        
+        // 2. Format names dynamically
+        if (rawBiz) {
+            const cleanName = rawBiz.replace(/_/g, ' ');
+            document.getElementById('biz-title').innerText = `Test ${cleanName}'s Voice Clone`;
+            document.getElementById('welcome-text').innerText = `We rebuilt this premium prototype specifically for ${cleanName}. Your custom AI answering assistant operates with sub-second latency to capture and secure missed revenue on autopilot.`;
+        }
+        
+        if (rawTrade) {
+            document.getElementById('trade-tag').innerText = `Built Exclusively For ${rawTrade}s`;
+        }
+
+        // 3. Telephony click action handler
+        function triggerDemoCall() {
+            alert("Voice engine demo system connecting... In production, this instantly launches a browser voice call or displays your dedicated local phone number context.");
+            // This hook attaches seamlessly to your Retell/Vapi dashboard settings later
+        }
+    </script>
+</body>
+</html>
